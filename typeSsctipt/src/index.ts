@@ -16,3 +16,8 @@ return arg
 }
 let a:string='hello' ;
 get<string>(a)
+//type can not redclare
+// type person ={name:string;age:number}
+// type person ={name:string;age:number}
+interface person {name:string;age:number}
+interface person {name:string;age:number}
