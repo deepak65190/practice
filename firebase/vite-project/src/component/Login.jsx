@@ -20,7 +20,7 @@ function Login() {
       <input
         type="email"
         required
-        placeholder="enter your name"
+        placeholder="enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
