@@ -1,17 +1,13 @@
-import { useState } from 'react'
-
-import Todo from './componets/Todo'
+import { useState } from "react";
+import Filesupload from "./files/Filesupload";
 function App() {
- 
-
   return (
     <>
       <div>
-       <Todo/> 
-      
+        <Filesupload></Filesupload>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
