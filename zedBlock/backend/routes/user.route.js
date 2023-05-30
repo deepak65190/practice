@@ -9,7 +9,7 @@ userRouter.post("/signup", async (req, res) => {
     const existName = await userModel.find({ name });
     
     if (existName.length > 0) {
-      res.status(401).send("this name already exist use unique name");
+      res.send("0");
     } else {
       const data = new userModel({ name, password, email });
       await data.save();
@@ -27,12 +27,12 @@ userRouter.post("/login", async (req, res) => {
     const exitstUser = await userModel.findOne({ name });
     if (exitstUser) {
       if (password === exitstUser.password) {
-        res.status(200).send("login successfull");
+        res.status(200).send("1");
       } else {
-        res.status(401).send("wrong password");
+        res.send("0");
       }
     } else {
-      res.status(404).send("user not found");
+      res.send("user not found");
     }
   } catch (err) {
     res.send(err.message);
