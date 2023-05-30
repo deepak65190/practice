@@ -1,0 +1,36 @@
+.main{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+.containter{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(246, 247, 248);
+}
+
+
+.singelContainter{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(250, 253, 255);
+    border-radius: 10px;
+    
+}
+h1{
+    color: teal;
+    cursor: pointer;
+}
+h1:hover{
+    color: rgb(140, 220, 220);
+}

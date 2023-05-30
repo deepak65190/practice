@@ -1,0 +1,18 @@
+form {
+  width: 400px;
+  border: 1px solid rgb(230, 230, 230);
+  margin: 3% auto;
+  padding: 3%;
+  background: white;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input ,textarea {
+  width: 90%;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 2%;
+}
