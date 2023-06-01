@@ -1,0 +1,17 @@
+.formContainer {
+  position: absolute;
+  width: 620px;
+  height: 555px;
+  
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  
+}
+.flower {
+  display: block;
+  margin: auto;
+margin-top: 50px;
+margin-bottom: -50px;
+  
+}

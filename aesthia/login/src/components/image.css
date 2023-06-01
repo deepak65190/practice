@@ -1,0 +1,80 @@
+.imageContainter{
+   
+position: absolute;
+width: 620px;
+height: 555px;
+
+margin-top: 50px;
+color: white;
+/* top: calc(50% - 555px/2); */
+
+ background: url(./reactagnle.png); 
+border-radius: 20px;
+}
+.logo{
+    position: absolute;
+width: 64px;
+height: 22px;
+
+color: white;
+left: 40px;
+top: 54px;
+}
+.emptyDiv{
+    position: absolute;
+width: 20px;
+height: 6px;
+left: 40px;
+top: 459px;
+
+background: #FFFFFF;
+border-radius: 74.4249px;
+transform: rotate(180deg);
+}
+.emptyDivC{
+    display: flex;
+    position: absolute;
+width: 4.87px;
+height: 5.49px;
+left: 65.23px;
+top: 458.49px;
+
+background: rgba(255, 255, 255, 0.31);
+border-radius: 74.4249px;
+transform: rotate(180deg);
+}
+.emptyDivl{
+    position: absolute;
+width: 4.87px;
+height: 5.49px;
+left: 75.89px;
+top: 458.49px;
+
+background: rgba(255, 255, 255, 0.31);
+border-radius: 74.4249px;
+transform: rotate(180deg);
+}
+.world{
+    margin-top: 60px;
+    position: absolute;
+    left: 40px;
+    
+}
+.world1{
+ margin-top: 59px;
+    position: absolute;
+    left: 60px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #bfbfbf;
+}
+.socialLinks{
+    position: absolute;
+    left: 550px;
+    width: 45px;
+    height: 15px;
+    margin-top: 59px;
+    color:white ;
+    
+    display: flex;
+}
