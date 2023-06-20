@@ -1,31 +1,43 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import {formatISO9075} from "date-fns"
 const Main = () => {
+  const [data,setData]=useState([]) ;
+  useEffect(()=>{
+fetch("http://localhost:8080/post").then((res)=>{
+  res.json().then((info)=>{
+    setData(info)
+  })
+})
+  },[])
+  console.log(data)
   return (
     <main>
-      <div className="post">
+      {data.length>0 && data.map((ele)=>{
+return(
+<div key={ele._id} className="post">
         <div>
           <img
             className="image"
-            src="https://images.unsplash.com/photo-1686903430773-1bbd4f74f48b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+            src={ele.url}
             alt="iamge loading"
           />
         </div>
         <div className="texts">
-          <h2>Full house battery backup coming later this year</h2>
+          <h2>{ele.title}</h2>
           <p className="info">
             <a href="" className="author">
-              Deepak Bisht
+              {ele.author.name}
             </a>
-            <time>2023-01-06 16:14</time>
+            <time>{ele.createdAt? formatISO9075(new Date (ele.createdAt)):""}</time>
           </p>
           <p className="summuary">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia,
-            unde ab alias, molestiae nulla autem similique quod pariatur
-            voluptates aliquid
+            {ele.summary}
           </p>
         </div>
       </div>
+)
+      })}
+      
     </main>
   );
 };

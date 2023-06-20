@@ -6,7 +6,8 @@ import Main from './components/Main'
 import Login from './pages/Login' 
 import Home from './pages/Home' 
 import Register from './pages/Register' ;
-import {Context} from "./components/Context"
+import {Context} from "./components/Context" ;
+import CreatPost from './pages/CreatPost'
 function App() {
  
 
@@ -18,6 +19,7 @@ function App() {
     <Route path='/headers' element={<Headers/>}/>
 
     <Route path='/post' element={<Main/>}/>
+    <Route path='/create' element={<CreatPost/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
    </Routes>
