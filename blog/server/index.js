@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const userModel = require("./model/user");
+const postModel=require("./model/post")
 const connect = require("./config/db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -76,8 +77,34 @@ app.post('/logout', (req,res) => {
 
 
 
+app.post("/post",async(req,res)=>{
+  const {title,contant,summary,url}=req.body ;
+  const { token } = req.cookies;
+  try{
+    jwt.verify(token, "deepak", {}, async(err, info) => {
+      if (err) {
+        console.log(err.message ,"err");
+      } else {
+        await postModel.create({title,contant,summary,url,author:info.id})
+res.json("ok")
+      }
+    })
 
+  }catch(err){
+    console.log(err.message)
+  }
+})
 
+app.get("/post",async(req,res)=>{
+  try{
+const data= await postModel.find().populate("author" ,["name"]).sort({createdAt:-1}).limit(20) ;
+res.send(data)
+  }catch(err){
+    console.log(err.message)
+  }
+  
+  
+})
 
 app.listen(8080, async () => {
   try {
