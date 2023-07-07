@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
 h1{
 height: 100px;
@@ -15,10 +19,43 @@ color: white;
 
 transform: scaleX(5);
 }
+.position{
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+div.sticky {
+ 
+  position:sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+@font-face {
+    font-family: myfont;
+    src: url(best_moment_2/Best\ Moment.otf);
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
     </style>
 </head>
 <body>
     <h1>hello word</h1>
-   
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <p class="position">
+        <img src="https://images.pexels.com/photos/16972014/pexels-photo-16972014/free-photo-of-greenway.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique optio tempora, nisi sit accusamus rerum deserunt dolorum ex vero porro repellendus. Excepturi facere earum atque in praesentium id rem natus.
+    </p>
+    <div class="sticky">I am sticky!</div>
+
+    <div style="padding-bottom:2000px">
+      <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+      <p>Scroll back up to remove the stickyness.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
 </body>
 </html>
