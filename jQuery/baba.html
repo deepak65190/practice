@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <style>
+        .click{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="first">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ea, sed dolor laborum optio a ducimus eaque perferendis assumenda quia beatae deserunt natus esse, nulla id quas? Praesentium, placeat ex?</h1>
+    <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+
+    </ul>
+    <div class="click">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ullam.</div>
+    <button id="button">Alt+Shift+Click on me!</button>
+    <p id="param">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ducimus nesciunt consequatur temporibus odit repellat voluptatum architecto dignissimos natus libero at vitae, laborum magnam labore iure, porro quod fuga? Aspernatur!</p>
+</body>
+</html>
+<script>
+    
+    $(document).ready(function(){
+    // select=>   $("#first").css("color","red" ,"background","blue");
+//mouse events
+
+// $(".click").click(function(){
+//     $(".click").css("background-color",'red')
+// })
+
+// $(".click").dblclick(function(){
+//     $(".click").css("background-color",'orange')
+// })
+// $(".click").contextmenu(function(){
+//     $(".click").css("background-color",'pink')
+// })
+// $(".click").mouseenter(function(){
+//     $(".click").css("background-color",'teal')
+// })
+// $(".click").mouseleave(function(){
+//     $(".click").css("background-color",'black')
+// })
+
+
+//keyboard events
+$("body").keypress(function(){
+    $("body").css("background-color","red")
+})
+$("body").keydown(function(){
+    $("body").css("background-color","orange")
+})
+$("body").keyup(function(){
+    $("body").css("background-color","black")
+})
+      
+    }) ;
+   
+</script>
