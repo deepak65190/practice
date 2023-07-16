@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="" id="sform">
+        <input type="text" id="sname">
+        <input type="text" id="slast">
+        
+        <select name="" id="num">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <input type="submit">
+    </form>
+    <div style="margin-top: 800px; ">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio delectus reprehenderit excepturi impedit fugiat ipsam, suscipit, tempora iusto doloremque illum, eius ducimus eveniet numquam repellendus earum ratione ex cumque molestiae!
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $("#sname,#slast ,#num").focus(function(){
+            // $(this).css("background-color","red")
+        }) ;
+        $("#sname ,#slast,#num").blur(function(){
+            // $(this).css("background-color","white")
+        }) ;
+        
+        $("#sname ,#slast,#num").change(function(){
+        //    alert( $(this).val())
+        }) ;
+        $("#sname #num").select(function(){
+           $(this).css("background-color","red")
+        }) ;
+        $(window).scroll(function(){
+            console.log("hii")
+        })
+    })
+</script>
