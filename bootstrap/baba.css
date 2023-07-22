@@ -1,0 +1,19 @@
+.container{
+    border: 1px solid red;
+}
+.raw{
+    margin: 10px;
+   border: 2px solid rgb(20, 214, 140);}
+    
+.col{ margin: 10px;
+   border: 2px solid rgb(156, 23, 233);
+    color: white;
+
+}
+::selection{
+    color: rgb(255, 255, 255);
+    background-color: teal;
+}
+.hii{
+    vertical-align:middle;
+}
