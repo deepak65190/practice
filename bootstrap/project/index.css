@@ -1,0 +1,20 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400;500&family=Gasoek+One&family=Inter:wght@600&family=Roboto+Slab:wght@500&display=swap');
+
+
+*{
+ 
+    font-family: 'Roboto Slab', serif;
+    
+}
+body{
+    background-color: #bfa8ed;
+   
+  }
+  header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #7531F9;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
