@@ -1,71 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <!-- bootsrap css -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <!-- exteranl css -->
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <!-- <header></header> -->
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand text-white" href="#">Logo</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <h1>
-                  <a
-                    class="nav-link active text-white"
-                    aria-current="page"
-                    href="#"
-                    >Home</a
-                  >
-                </h1>
-              </li>
-              <li class="nav-item">
-                <h1><a class="nav-link text-white" href="#">About</a></h1>
-              </li>
 
-              <li class="nav-item">
-                <h1><a class="nav-link text-white">Contact</a></h1>
-              </li>
-            </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <!-- bootsrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!-- exteranl css -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- <header></header> -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand text-white self-study" href="#">Self Study</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <h1>
+                <a class="nav-link active text-white nav-text-font" aria-current="page" href="#">Home</a>
+              </h1>
+            </li>
+            <li class="nav-item">
+              <h1><a class="nav-link text-white nav-text-font" href="#">About</a></h1>
+            </li>
+
+            <li class="nav-item">
+              <h1><a class="nav-link text-white nav-text-font">Contact</a></h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- books gallery -->
+    <section>
+      <div class="container .container-fluid-sm container-md imag-cont">
+        <div class="row  g-3 mediaSmall">
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIguMCLoGdKarPl65zq_DzSjaDVD0YlPnuWw&usqp=CAU"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Rich Dad Poor Dad</h5>
+                <p class="card-text">What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not...</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  More Infomation
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU2lI1KhKJpKsJFiOPP6zSg_TfTIQ34N-rfQ&usqp=CAU"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">2 STATES</h5>
+                <p class="card-text">2 States: The Story of My Marriage commonly known as 2 States...</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images.cdn.kukufm.com/w:720/f:webp/q:85/https://s3.ap-south-1.amazonaws.com/kukufm/channel_icons/441a1ff392d54b849dce4a852cfa3311_landscape_429.png"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Doglapan</h5>
+                <p class="card-text">Doglapan: The Hard Truth about Life and soled 4500 copies and keep counting...</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1639169039i/59795331.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Do Epic Shit</h5>
+                <p class="card-text">Ankur Warikoo is an entrepreneur and content creator whose deep, witty and brutally...</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images.pexels.com/photos/10863290/pexels-photo-10863290.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images.pexels.com/photos/13650913/pexels-photo-13650913.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">— Amal Clooney</h5>
+                <p class="card-text">"Be courageous. Challenge orthodoxy. Stand up for what you believe in. When ..."</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Extra Ordinary</h5>
+                <p class="card-text">"Life has got all those twists and turns. You've got to hold on tight and off go..."
+                  — Nicole Kidman</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 one">
+            <div class="card" style="width: 18rem;">
+              <img
+                src="https://images.pexels.com/photos/17480199/pexels-photo-17480199/free-photo-of-top-view-of-a-woman-playing-the-piano.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Open the World</h5>
+                <p class="card-text">When you have a dream, you've got to grab it and never let go."... — Carol Burnett</p>
+                <a href="#" class="btn btn-primary">More Infomation</a>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </section>
+    <section>
+      <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Book Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=600"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Extra Ordinary</h5>
+            <p class="card-text">"Epic Shit" is a motivational mantra that encourages individuals to strive for remarkable achievements, overcome challenges, and pursue their goals with determination and enthusiasm. It serves as a reminder to embrace opportunities, take risks, and push beyond comfort zones to create a life that is fulfilling and impactful. The phrase inspires people to go beyond the ordinary and make a positive difference in their lives and the lives of others. It emphasizes the importance of taking action and embracing a mindset that leads to extraordinary accomplishments</p>
+           
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+  </main>
 
-    <main>
-      <!-- image gallery -->
-      <section></section>
-    </main>
+  <!-- bootstrap bundle  cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
 
-    <!-- bootstrap bundle  cdn link -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
