@@ -20,7 +20,9 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 12000;
   background-color: #824cef;
+  border-radius: 0 0 30% 30%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .nav-text-font{
