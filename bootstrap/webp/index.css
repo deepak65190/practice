@@ -1,0 +1,15 @@
+.container{
+    border: 1px solid red;
+    height: auto;
+}
+.col{
+    border: 1px solid rgb(98, 84, 204);
+}
+h1{
+    background-color: red;
+}
+.one{
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400;500&family=Gasoek+One&family=Inter:wght@600&family=Roboto+Slab:wght@500&display=swap');
+
+
+* {
+
+  font-family: 'Roboto Slab', serif;
+
+}
+
+body {
+  background-color: #bfa8ed;
+
+}
+
+nav {
+  z-index: 1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 12000;
+  background-color: #824cef;
+  border-radius: 0 0 30% 30%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.nav-text-font{
+  font-family: nav;
+}
+.self-study{
+  font-family: self;
+}
+@font-face {
+  font-family: self;
+  src: url(bassy/Bassy.ttf);
+}
+@font-face {
+  font-family: nav;
+  src: url(vintage_handmade/Vintage\ Handmade.ttf);
+}
+img {
+  height: 200px;
+  object-fit: cover;
+}
+/* .one{
+  border: 1px solid red;
+} */
+
+.imag-cont {
+  z-index: -1;
+  margin-top: 50px;
+}
+
+
+@media only screen and (max-width: 575px) {
+
+  /*Small smartphones [325px -> 425px]*/
+  .mediaSmall {
+    display: grid;
+    grid-template-columns: repeat(1, fra);
+  }
+}
