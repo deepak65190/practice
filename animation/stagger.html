@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html ,body{
+        width: 100%;
+        height: 100%;
+    }
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one{
+    background-color: red;
+}
+.two{
+    background-color: rgb(18, 11, 93);
+}
+.three{
+    background-color: rgb(250, 181, 5);
+}
+.box ,.second-box{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div class="main one"><div class="box"></div></div>
+    <div class="main two"><div class="second-box"></div></div>
+    <div class="main three"><div class="box third-box"></div></div>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    gsap.from(".box" ,{
+        scale:0 ,
+        duration:1 ,
+        delay:1 ,
+        rotate:-360 ,
+
+    })
+    gsap.from(".second-box" ,{
+        scale:0 ,
+        duration:.5 ,
+       
+        rotate:360 ,
+        scrollTrigger:{
+            trigger:".second-box" ,
+            scroller:"body" ,
+            markers:true ,
+            start:"top 50%" ,
+            end:"top 20%" ,
+            scrub:true
+        }
+
+    })
+</script>
