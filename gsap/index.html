@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html ,body{
+            width: 100%;
+            height: 100%;
+        }
+.main ,.maon1{
+    width: 100%;
+    height: 100%;
+    background: rgb(7, 7, 7);
+    position: relative;
+}
+.child , .child1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: crimson;
+    border-radius: 20px;
+}
+.child1{
+    z-index: 1;
+    background-color: yellow;
+}
+.maon1{
+    background-color: gray;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child"></div>
+        <div class="child1"></div>
+    </div>
+    <div class="main1">
+        <div class="child"></div>
+        <div class="child1"></div>
+    </div>
+</body>
+<!-- gsap cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+gsap.to(".child",{
+    x:1000 ,
+    y:100 ,
+   
+    scale:.5 ,
+    repeat:-1 ,
+    duration:2 ,
+    backgroundColor:""
+})
+gsap.from(".child1",{
+    x:1000 ,
+    y:400 ,
+    delay:2 ,
+    scale:1.5 ,
+    repeat:-1 ,
+    duration:1,
+    backgroundColor:"red",
+    yoyo:true
+})
+</script>
+</html>

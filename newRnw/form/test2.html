@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"] ,#course ,#one{
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin: auto;
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      border: 1px solid rgb(182, 182, 182);
+    }
+
+    th {
+      color: white;
+      background-color: #5894e2;
+    }
+
+    #data {
+        width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      margin: auto;
+    }
+
+    .data-item {
+      width: 300px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .data-item img {
+      width: 100%;
+      border-radius: 5px ;
+    }
+
+    .data-item h2,
+    .data-item h3,
+    .data-item h4 {
+      margin: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="course">Course:</label>
+       <select name="course" id="course">
+        <option value="">Select Course</option>
+        <option value="Full-Stack">Full stack</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="GIM">GIM</option>
+        <option value="ui/ux ">ui/ux </option>
+        
+       </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your number" />
+      </div>
+      <div class="form-group">
+        <label for="url">Photo URL:</label>
+        <input type="url" id="url" name="url" placeholder="Enter image URL" />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+<!-- filler data  -->
+<div class="form-group" style="width: 23%;margin: auto; margin-bottom: 20px;">
+    <label for="one">Filter Courses:</label>
+   <select name="course" id="one">
+    <option value="">Choose Course</option>
+    <option value="Full-Stack">Full stack</option>
+    <option value="Frontend">Frontend</option>
+    <option value="Backend">Backend</option>
+    <option value="GIM">GIM</option>
+    <option value="ui/ux">ui/ux </option>
+    
+   </select>
+  </div>
+
+  <!-- Display input data -->
+  <div id="data"></div>
+
+  <script>
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let phone = document.getElementById("phone");
+    let url = document.getElementById("url");
+    let coure=document.getElementById("course")
+    let dataDiv = document.getElementById("data");
+
+    let formData = [];
+
+    document.getElementById("myForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if(name.value==""){
+        alert("Please fill the Name") ;
+      }else if(coure.value==""){
+        alert("Please select the Course") ;
+      }
+      else if(email.value==""){
+        alert("Please fill the Email") ;
+      }else if(phone.value==""){
+        alert("Please fill the phone number") ;
+      }else if(url.value==""){
+        alert("Please fill the image url") ;
+      }else{
+        let obj = {
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        url: url.value,
+        course: course.value 
+      };
+      formData.push(obj);
+      
+      }
+      displayFormData(formData);
+
+      
+     
+    });
+
+    function displayFormData(formData) {
+    if(formData.length==0){
+      dataDiv.innerHTML = "";
+      console.log(formData.length)
+      let h1=document.createElement("h1") ;
+      h1.innerText="You don't have any data || 404"
+      dataDiv.append(h1)
+    }else{
+      dataDiv.innerHTML = "";
+      formData.forEach((data, index) => {
+        let itemDiv = document.createElement("div");
+        itemDiv.classList.add("data-item");
+
+        let img = document.createElement("img");
+        img.src = data.url;
+
+        let nameHeading = document.createElement("h2");
+        nameHeading.textContent = data.name;
+        let courseHeading = document.createElement("h2");
+        courseHeading .textContent = data.course;
+
+        let emailHeading = document.createElement("h3");
+        emailHeading.textContent = data.email;
+
+        let phoneHeading = document.createElement("h4");
+        phoneHeading.textContent = data.phone;
+
+        itemDiv.append(img, nameHeading, courseHeading, emailHeading, phoneHeading);
+        dataDiv.appendChild(itemDiv);
+      });
+    }
+     
+    }
+    // filler section
+    
+    document.getElementById("one").addEventListener("change",()=>{
+        let fillter=document.getElementById("one").value ;
+     if(fillter=="Full-Stack"){
+        let filteredData = formData.filter(data => data.course === fillter);
+      displayFormData(filteredData);
+     }else if(fillter=="Frontend"){
+      let filteredData = formData.filter(data => data.course === fillter);
+      displayFormData(filteredData);
+     }else if(fillter=="Backend"){
+      let filteredData = formData.filter(data => data.course === fillter);
+      displayFormData(filteredData);
+     }else if(fillter=="GIM"){
+      let filteredData = formData.filter(data => data.course === fillter);
+      displayFormData(filteredData);
+     }else if(fillter=="ui/ux"){
+      let filteredData = formData.filter(data => data.course === fillter);
+      displayFormData(filteredData);
+     }else{
+      displayFormData(formData)
+     }
+    })
+  </script>
+</body>
+</html>
