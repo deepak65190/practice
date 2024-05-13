@@ -1,12 +1,15 @@
 import React from 'react'
-
-import { Card } from './Card/Card'
+import { FoodList , FoodProvider} from './Card/newCard'
+import { Card , } from './Card/Card'
 function App() {
   
 
   return (
     <>
-      <Card/>
+      <FoodProvider>
+        <FoodList/>
+      </FoodProvider>
+      
      
     </>
   )
