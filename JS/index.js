@@ -7,7 +7,7 @@
 // console.warn(bird.size)
 // console.warn(bird.data)
 // var x;
-// let x = 10;
+// let x = 10; 
 // console.log(x)
 
 //  var x;
@@ -62,3 +62,4 @@
 // }
 a=10
 console.log(a)
+console.log(typeof console)
