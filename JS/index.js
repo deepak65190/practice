@@ -60,6 +60,35 @@
 //     }
 // a(i)
 // }
-a=10
-console.log(a)
-console.log(typeof console)
+// a=10
+// console.log(a)
+// console.log(typeof console.log())
+// console.log(age)
+// age= 20 ;
+// console.log(age)
+// age= 20 ;
+// console.log(age)
+// let age= 50 ;
+// console.log(age)
+
+// abc(1) 
+// function abc(a){
+//     console.log(a)
+// }
+// abc(3)
+//  var abc=function(a){
+//     console.log(a)
+// }
+// abc(4)
+
+// let a=10 ;
+// function ab(){
+
+//     console.log(a)
+//     let a=30 ;
+//     console.log(a)
+// }
+// ab()
+setInterval(function(){
+    console.log(1)
+},)
