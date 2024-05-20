@@ -7,7 +7,7 @@
 // console.warn(bird.size)
 // console.warn(bird.data)
 // var x;
-// let x = 10; 
+// let x = 10;
 // console.log(x)
 
 //  var x;
@@ -60,35 +60,13 @@
 //     }
 // a(i)
 // }
-// a=10
+//a=10
 // console.log(a)
-// console.log(typeof console.log())
-// console.log(age)
-// age= 20 ;
-// console.log(age)
-// age= 20 ;
-// console.log(age)
-// let age= 50 ;
-// console.log(age)
+// console.log(console.log)
+// let a='adf\nafad'
+// console.log(a) ;
 
-// abc(1) 
-// function abc(a){
-//     console.log(a)
-// }
-// abc(3)
-//  var abc=function(a){
-//     console.log(a)
-// }
-// abc(4)
-
-// let a=10 ;
-// function ab(){
-
-//     console.log(a)
-//     let a=30 ;
-//     console.log(a)
-// }
-// ab()
-setInterval(function(){
-    console.log(1)
-},)
+function navbar(){
+    return `<h1>hello</h1>`
+}
+export default navbar()
