@@ -1,9 +1,10 @@
 
-import BgChanger from "./pro1/bgChanger"
+// import BgChanger from "./pro1/bgChanger"
+import Counter  from "./pro2/Counter"
 function App() {
 
   return (
-   <BgChanger/>
+   <Counter/>
   )
 }
 
