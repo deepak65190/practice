@@ -1,14 +1,26 @@
-import { useState } from 'react'
-import Counter from './Counter'
-import './App.css'
+import { useEffect, useState } from 'react';
+import './App.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+
+  const [count, setCount] = useState(1);
+
+  const handleAdd = () => {
+   
+    setCount(2);
+   
+  };
+
+
 
   return (
-    
-  <Counter/>
-  )
+    <>
+      <h1>{count}</h1>
+      <button onClick={handleAdd}>Click</button>
+    </>
+  );
 }
 
-export default App
+export default App;

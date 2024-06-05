@@ -2,11 +2,17 @@
 // import BgChanger from "./pro1/bgChanger"
 //import Counter  from "./pro2/Counter"
 //import FetchData  from "./pro3/fetch"
-import Board from "./pro4/Board"
+//import Swap from "./pro5/Swap"
+//import Board from "./pro4/Board"
+import Nav from "./Route/Nav" ;
+import AllRoute from "./Route/AllRounte";
 function App() {
 
   return (
-<Board/>
+    <>
+<Nav/>
+<AllRoute/>
+</>
   )
 }
 

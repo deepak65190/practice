@@ -1,4 +1,4 @@
-import React ,{useRef, useEffect, useState} from 'react'
+import React ,{useRef, useEffect, useState, useCallback} from 'react'
 
 const Board = () => {
     const [password ,setPassword]=useState("hello") ;
@@ -38,11 +38,11 @@ setRange(e.target.value)
     ref.current.select()
       ref.current.setSelectionRange(0, 5)
     }
-
+const gen=useCallback(pass ,[range ,nums,charAllow])
     
 useEffect(()=>{
-pass()
-},[range ,nums,charAllow]) ;
+gen()
+},[range ,nums,charAllow ,gen]) ;
 
   return (
     <>

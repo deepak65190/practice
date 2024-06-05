@@ -1,21 +1,22 @@
 import { useSelector ,useDispatch } from "react-redux"
-import { add ,sub } from "./CounterSlice";
+// import { add ,sub } from "./CounterSlice";
+import { fetchTodos } from "./ApiSlice";
+import { useEffect } from "react";
 const Counter=()=>{
-    const count = useSelector((state)=>state.value)
-  
+    //const count = useSelector((state)=>console.log(state))
 
-    const dispatch=useDispatch()
-const handleAdd=()=>{
-    dispatch(add(5))
-}
-const handleSub=()=>{
-dispatch(sub(5))
-}
+
+  const dispatch=useDispatch()
+
+useEffect(()=>{
+   dispatch(fetchTodos())
+})
     return(
         <>
-        <h1>{count}</h1>
-        <button onClick={handleAdd}>+</button>
-        <button onClick={handleSub}>-</button>
+       
+       
+        
+       <h1>hello</h1>
         </>
     )
 }
