@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Quiz APP</h1>
+        <h2 id="quition"></h2>
+        <div id="options">
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+        </div>
+        <button id="nextbtn">Next</button>
+    </main>
+
+</body>
+</html>
+<script>
+    let arr=[
+        {quition:"what is the full form of JSON",
+        option:["js","JavaScript Object Notation" ,"js xml","js dom"],
+        ans:"JavaScript Object Notation"
+        } ,
+        {quition:"type of null",
+        option:["boolean","obj" ,"undefined","number"],
+        ans:"obj"
+        } 
+    ]
+    const q=document.getElementById("quition") ;
+    const option =document.querySelectorAll(".option") ;
+    const nextBtn=document.getElementById("nextbtn") ;
+    console.log(option)
+    let count=0 ;
+    q.innerText=arr[count].quition ;
+    option.forEach((el ,ind)=>{
+    el.innerText=arr[count].option[ind]
+})
+    count++
+
+    nextBtn.addEventListener("click",()=>{
+        q.innerText=arr[count].quition ;
+option.forEach((el ,ind)=>{
+    el.innerText=arr[count].option[ind]
+})
+        count++
+
+    })
+</script>
