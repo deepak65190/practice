@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 const { userModel } = require("../models/user.model");
 const userRoute = express.Router();
+
+//register router
 userRoute.post("/register", (req, res) => {
   try {
     const { name, password, email } = req.body;
@@ -32,10 +34,11 @@ userRoute.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const existData = await userModel.find({ email });
+    console.log(existData)
     const hash = existData[0].password;
     bcrypt.compare(password, hash, (err, result) => {
       if (result) {
-        const token = jwt.sign({ email: email }, "deepak");
+        const token = jwt.sign({ user_id: existData[0]._id }, "deepak");
         res.send(token);
       } else {
         res.send("wrong credentials");

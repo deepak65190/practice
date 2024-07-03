@@ -10,9 +10,9 @@ const notesSchema=mongoose.Schema({
         require:true ,
         trim:true 
     } ,
-    author:{
+    userID:{
         type:String ,
-        require:true ,
+       
         trim:true 
     } ,
     category:{
