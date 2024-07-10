@@ -22,12 +22,17 @@ if(timer==0){
     setLoad(false)
     clearInterval(c)
    }
+   const handlReset=()=>{
+    setTimer(0)
+    clearInterval(c)
+   }
   return (
     <div>
       <h1>Counter </h1>
       <button onClick={handleCounter} disabled={load}>Start  </button>
       <button>{timer}</button>
       <button onClick={handlStop}>Stop</button>
+      <button onClick={handlReset}>Reset</button>
     </div>
   )
 }
