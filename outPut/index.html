@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Propagation</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+  <div id="parent">
+    <button id="child">Click Me</button>
+  </div>
+
+  <script>
+    document.getElementById('parent').addEventListener('click', function(event) {
+      alert('Parent clicked!');
+    },);
+
+    document.getElementById('child').addEventListener('click', function(event) {
+      alert('Child clicked!');
+      //event.stopPropagation(); // Uncomment to stop the event from bubbling up
+    });
+  </script>
+</body>
+</html>
