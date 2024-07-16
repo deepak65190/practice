@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Ellipsis with JS</title>
+    <style>
+        .shortened-text-container {
+            width: 80px; /* Set the width according to your needs */
+            border: 1px solid #000; /* Optional: to see the container */
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="shortened-text-container" id="textContainer">
+        Hello World
+    </div>
+
+    <script>
+        function truncateText(element, maxWidth) {
+            let text = element.textContent;
+            let truncatedText = text;
+            const ellipsis = '...';
+
+            while (element.scrollWidth > maxWidth) {
+                truncatedText = truncatedText.slice(0, -1);
+                element.textContent = truncatedText + ellipsis;
+            }
+        }
+
+        const textContainer = document.getElementById('textContainer');
+        const maxWidth = textContainer.clientWidth;
+        truncateText(textContainer, 20);
+    </script>
+</body>
+</html>
