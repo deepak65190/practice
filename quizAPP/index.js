@@ -13,7 +13,21 @@ if ((a == b) == c) {
     console.log(false);
   }
   function ab(a){
-    let c=a||"absent" ;
+    //let c=a||"absent" ;
+    let c=a||"absent"
     console.log(c)
   }
 ab(0)
+let arr=[1,2,3,1,2,3] ;
+let obj={} ;
+for(let i=0 ; i<arr.length ; i++){
+  let char=arr[i] ;
+  if(obj[char]==undefined){
+    obj[char]=arr[i]
+  }else{
+    obj[char]+=1
+  }
+}
+console.log(obj)
+
+
