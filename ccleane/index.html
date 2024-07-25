@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CCleaner Free</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 100px;
+      height: calc(92vh - 2px);
+      background-color: #5f5e5e;
+      color: #fff;
+      padding: 2px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+        width: 100%;
+        border-bottom: 1px solid rgb(118 113 113);
+      
+      
+    }
+
+    .sidebar li a {
+      display: block;
+      padding: 10px 0px;
+      background-color: #5f5e5e;
+      color: #fff;
+      text-decoration: none;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .sidebar li :hover {
+      background-color: #555;
+    }
+
+    .main {
+      flex-grow: 1;
+      background-color: white;
+      
+      position: relative;
+      width: calc(100% - 120px);
+      
+    }
+
+    .main h1 {
+      text-align: center;
+    }
+
+    .main p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .buttons button:hover {
+      background-color: #0069d9;
+    }
+   .learn-btn{
+    background-color: white !important;
+    color:#0069d9 !important   ;
+    border: 1px solid #0069d9 !important;
+   }
+    .learn-btn:hover{
+        background-color: #0069d9 !important;
+        color: white !important;
+    }
+    .header {
+      background-color: #464444;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    .header .button {
+      padding: 5px 10px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+   
+    .main-img{
+        width: 500px;
+       
+        margin: auto;
+    }
+
+    .footer {
+        height: 41px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      background-color: #545252;
+      color: #fff;
+     font-size: 9px;
+     display: flex;
+     justify-content: space-between;
+      
+    }
+    p a{
+        color: white;
+    }
+.window-foot{
+    padding-left: 5px;
+
+    text-align: left !important;
+}
+    
+    /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .main {
+    order: 1;
+  }
+}
+
+
+.buttons button,
+.sidebar li a {
+  transition: background-color 0.3s ease;
+}
+.fas{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.header-btn{
+  border-radius: 10px;
+cursor: pointer;
+padding: 6px 30px;
+margin-right: 20px;
+font-weight: bolder;
+
+}
+.heart-icon{
+  padding: 3px;
+  font-size: 20px;
+  margin-top: 5px;
+
+}
+.btn-account{
+  background-color: white;
+  color: #0069d9;
+ 
+}
+.btn-status{
+  color: white;
+  background-color: #464444;
+  border: 2px solid white;
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>CCleaner Free</h1>
+    <div>
+      <button class="header-btn btn-status"> <i class="fa-solid fa-heart-pulse heart-icon"></i>Health status</button>
+      <button class="header-btn btn-account"> <i class="fa-regular fa-circle-user heart-icon"></i>My Account</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-shield-heart fas"></i>Health Check</a></li>
+        <li><a href="#"><i class="fas fa-wrench"></i> Custom Clean</a></li>
+        <li><a href="#"><i class="fas fa-rocket"></i> Performance Optimizer</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Driver Updater</a></li>
+        <li><a href="#"><i class="fas fa-sync-alt"></i> Software Updater</a></li>
+        <li><a href="#"><i class="fas fa-tools"></i> Tools</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Options</a></li>
+        <li><a href="#"><i class="fas fa-arrow-up"></i> Upgrade</a></li>
+      </ul>
+    </div>
+    <div class="main">
+        <div class="main-img">
+            <img src="add-removebg-preview.png" alt="">
+        </div>
+      <h1>Welcome back to Health Check</h1>
+      <p style="line-height: 0px;">Start by scanning your PC, review the results and apply updates in just</p>
+      <p> a few clicks. We won't clean anything without asking first.</p>
+      <div class="buttons">
+        <button style="padding: 15px;">Scan PC</button>
+        <button class="learn-btn" >Learn More</button>
+      </div>
+      <div class="footer">
+        <div> <p class="window-foot">Windows 10 Pro 64-bit (Admin)</p>
+            <p  style="padding-left: 5px;margin-top: -15px;">Intel Core i3-6006U CPU @ 2.00GHz, 4.0GB RAM, Intel HD Graphics 520</p></div>
+        <div> <p><a href="#">Check for updates</a></p></div>
+       
+       
+      </div>
+    </div>
+  
+ 
+  </div>
+</body>
+</html>
