@@ -28,6 +28,17 @@ for(let i=0 ; i<arr.length ; i++){
     obj[char]+=1
   }
 }
-console.log(obj)
+let arr2=[1,2,3,1,2,3] ;
+let obj23
+={} ;
+for(let i=0 ; i<arr.length ; i++){
+  let char=arr[i] ;
+  if(obj[char]==undefined){
+    obj[char]=arr[i]
+  }else{
+    obj[char]+=1
+  }
+}
 
+console.log(obj) 
 
