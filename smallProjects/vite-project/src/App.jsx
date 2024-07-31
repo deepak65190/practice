@@ -1,5 +1,5 @@
-import CountDown from './CountDown'
 
+import Circule from './Circule.jsx' ;
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-     <CountDown/>
+     <Circule/>
     </>
   )
 }
