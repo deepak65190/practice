@@ -95,8 +95,43 @@ pet.bark();*/
 // ab(a)
 // ab(a)
 // index.js
-console.log('running index.js');
-import { sum } from './sum.js';
-console.log(sum(1, 2));
+// console.log('running index.js');
+// import { sum } from './sum.js';
+// console.log(sum(1, 2));
 
-// sum.js
+// // sum.js
+
+// let a=10 ;
+// let b={
+//   name:"ram" ,
+//   fun:()=>{
+//     console.log(this.name)
+//   }
+
+// }
+// b.fun()
+// function a(b=5){
+//   if(b==5) console.log("hii") 
+// }
+// a()
+/*function nums(a, b) {
+  if (a > b) console.log('a is bigger');
+  else console.log('b is bigger');
+  return
+  a + b;
+}
+
+console.log(nums(4, 2));
+console.log(nums(1, 2));*/
+// let obj={
+ 
+//   fun:function(){
+//     console.log(this.name)
+//   } ,
+//   name:"kush"
+// }
+// obj.fun()
+let obj={
+  class:"one"
+}
+console.log(obj.class)
