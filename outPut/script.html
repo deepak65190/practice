@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+</body>
+</html>
+<script>console.log("hello" , 1 )
+
+
+const member = { 
+  name: "Jane", 
+  address: { street: "101 Main St" }
+};
+const member2 = { ...member };
+member.address.street = "102 Main St";
+member.name = "Sarah";
+
+console.log(member2);
+console.log(member);
+let count=1 ;
+function ab(){
+    count++ ;
+    console.log(count)
+}
+ab()
+ab()
+</script>
