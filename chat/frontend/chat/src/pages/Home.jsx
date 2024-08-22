@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Text ,Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import Login from "./Login";
+import Login from "../component/Login";
+import Signup from "../component/Signup";
 const Home = () => {
   return (
     <Container maxW={"xl"} centerContent textColor={"black"}>
@@ -17,7 +18,7 @@ const Home = () => {
           
       <Text  fontSize={"4xl"} textAlign="center">Chaty app</Text>
       </Box>
-      <Box width="100%" borderRadius="lg" borderWidth="1px" p={4}>
+      <Box width="100%" borderRadius="lg" shadow="rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;" borderWidth="1px" p={4}>
       <Tabs variant='soft-rounded' >
   <TabList mb="1rem">
     <Tab w="50%">Login</Tab>
@@ -28,7 +29,7 @@ const Home = () => {
       <Login/>
     </TabPanel>
     <TabPanel>
-    {/* <Signup/> */}
+    <Signup/>
     </TabPanel>
   </TabPanels>
 </Tabs>

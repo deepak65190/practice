@@ -3,10 +3,8 @@ import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";
 import { useState } from "react";
-
+import axios from "axios";
 import { useToast } from "@chakra-ui/react";
-// import { useHistory } from "react-router-dom";
-// import { ChatState } from "../../Context/ChatProvider";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -16,15 +14,65 @@ const Login = () => {
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
 
-//   const history = useHistory();
-//   const { setUser } = ChatState();
-
   const submitHandler = async () => {
-  }
+    setLoading(true); // Start loading when submitting
+    if (email && password) {
+      try {
+        const config = {
+          headers: {
+            "Content-type": "application/json",
+          },
+        };
+        const data  = await axios.post(
+          "http://localhost:8080/api/user/login",
+          {
+            email,
+            password,
+          },
+          config
+        );
+  console.log(data)
+        if (data.status === 200) {
+          toast({
+            title: "Login Successful",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+            position: "bottom",
+          });
+          localStorage.setItem("userInfo", JSON.stringify(data));
+          setEmail("");
+          setPassword("");
+          // navigate("/chats"); // Uncomment this line if you want to navigate after successful login
+        }
+      } catch (error) {
+        toast({
+          title: "Error Occurred!",
+          description: error.response?.data?.message || "Something went wrong",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+      } finally {
+        setLoading(false); 
+      }
+    } else {
+      toast({
+        title: "Please Fill all the Fields",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      setLoading(false); 
+    }
+  };
+  
 
   return (
     <VStack spacing="10px">
-      <FormControl  isRequired>
+      <FormControl isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
           value={email}
