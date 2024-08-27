@@ -1,8 +1,9 @@
 require("dotenv").config()
 const express=require("express") ;
 const connection =require("./config/db") ;
-const cors=require("cors")
-const userRoute =require("./routes/user.route")
+const cors=require("cors") ;
+const userRoute =require("./routes/user.route") ;
+const chatRouter =require("./routes/chat.route")
 const app=express() ;
 app.use(cors("*"))
 app.use(express.json())
@@ -13,6 +14,7 @@ app.get("/" ,(req,res)=>{
 }) ;
 
 app.use("/api/user" ,userRoute)
+app.use("/api/chat" ,chatRouter)
 
 // 404 handler
 app.use((req, res, next) => {
