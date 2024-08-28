@@ -4,6 +4,7 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 
 const Login = () => {
@@ -13,9 +14,9 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
-
+const navigate=useNavigate()
   const submitHandler = async () => {
-    setLoading(true); // Start loading when submitting
+    setLoading(true); 
     if (email && password) {
       try {
         const config = {
@@ -41,9 +42,10 @@ const Login = () => {
             position: "bottom",
           });
           localStorage.setItem("userInfo", JSON.stringify(data));
+          navigate("/chats");
           setEmail("");
           setPassword("");
-          // navigate("/chats"); // Uncomment this line if you want to navigate after successful login
+          
         }
       } catch (error) {
         toast({

@@ -16,7 +16,7 @@ const Signup = () => {
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [confirmpassword, setConfirmpassword] = useState();
+ 
   const [password, setPassword] = useState();
   const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
@@ -34,16 +34,7 @@ const Signup = () => {
       setPicLoading(false);
       return;
     }
-    if (password !== confirmpassword) {
-      toast({
-        title: "Passwords Do Not Match",
-        status: "warning",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
-      return;
-    }
+    
     //console.log(name, email, password, pic);
     try {
       const config = {
@@ -72,13 +63,14 @@ const Signup = () => {
             position: "bottom",
           });
 localStorage.setItem("userInfo", JSON.stringify(data));
+
 setEmail("") ;
 setConfirmpassword("") 
 setPassword("")
 setName("") 
 
 setPicLoading(false);
-  //navigate("/chats");
+  navigate("/chats");
       }
       
     } catch (error) {
@@ -176,22 +168,7 @@ setPicLoading(false);
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="cpassword" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
-        <InputGroup size="md">
-          <Input
-          value={confirmpassword}
-            type={show ? "text" : "password"}
-            placeholder="Confirm password"
-            onChange={(e) => setConfirmpassword(e.target.value)}
-          />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
+              
       <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
