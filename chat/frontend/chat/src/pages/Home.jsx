@@ -3,11 +3,12 @@ import { Box, Container, Text ,Tabs, TabList, TabPanels, Tab, TabPanel } from "@
 import Login from "../component/Login";
 import Signup from "../component/Signup";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 const Home = () => {
   const navigate=useNavigate()
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    setUser(userInfo);
+    
 
     if (userInfo) {
       navigate("/chats"); 
