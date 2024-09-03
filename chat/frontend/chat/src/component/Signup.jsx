@@ -23,7 +23,7 @@ const Signup = () => {
 
   const submitHandler = async () => {
     setPicLoading(true);
-    if (!name || !email || !password || !confirmpassword) {
+    if (!name || !email || !password ) {
       toast({
         title: "Please Fill all the Feilds",
         status: "warning",
@@ -65,7 +65,7 @@ const Signup = () => {
 localStorage.setItem("userInfo", JSON.stringify(data));
 
 setEmail("") ;
-setConfirmpassword("") 
+
 setPassword("")
 setName("") 
 
