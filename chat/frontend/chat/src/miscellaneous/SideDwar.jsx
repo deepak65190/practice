@@ -103,7 +103,7 @@ const accessChat=(id)=>{
      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent borderBottomWidth="1px">
-          <DrawerHeader borderBottomWidth='1px'>Search users</DrawerHeader>
+          <DrawerHeader borderBottomWidth='1px'>Search users</DrawerHeader>9
           <DrawerBody>
            <Box display="flex" pb="2">
             <Input placeholder="search by name or email" mr="2" value={search} onChange={(e)=>setSearch(e.target.value)}/>
