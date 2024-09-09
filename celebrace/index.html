@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      p {
+        color: #666;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .container {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 10px;
+        flex-direction: row;
+      }
+
+      .header {
+        width: 50%;
+      }
+
+      .top-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .one p {
+        display: inline-block;
+      }
+
+      .one button {
+        margin-right: 20px;
+        color: rgb(107, 206, 107);
+        border: 1px solid #666;
+        border-radius: 20px;
+        padding: 10px 15px;
+        background-color: white;
+        font-size: 17px;
+        cursor: pointer;
+      }
+
+      .logo-image-box {
+        width: 80px;
+        height: 80px;
+      }
+
+      .logo-image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40%;
+      }
+
+      h1 {
+        margin-top: 30px;
+        text-align: center;
+        color: #1b1b1b;
+      }
+
+      /* login form css */
+      .form-section {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .login-form input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .remember-me {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .remember-me input {
+        margin-right: 10px;
+      }
+
+      #remember {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid rgb(107, 206, 107);
+        width: 20px;
+        height: 20px;
+      }
+
+      #remember:checked::after {
+        content: '\2714';
+        color: green;
+        position: absolute;
+        top: 0;
+        left: 4px;
+      }
+
+      .login-button {
+        padding: 10px;
+        background-color: rgb(107, 206, 107);
+        color: white;
+        border: none;
+       position: relative;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        color: rgb(36, 125, 36);
+        margin-left: 20px;
+      }
+
+      .footer {
+        margin-top: 90px;
+        text-align: center;
+      }
+
+      .footer p {
+        word-spacing: 3px;
+        font-size: 10px;
+      }
+
+      /* home image css */
+      .home-img {
+        width: 50%;
+        height: 500px;
+        border-radius: 10px;
+      }
+
+      .home-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+        /* loader */
+        .login-button .loader {
+      border: 3px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 3px solid #d3d7da;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      animation: spin 1s linear infinite;
+      
+      display: none;
+    }
+      /* Animations */
+      @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+      @keyframes leftToRight {
+        0% {
+          transform: translateX(-20%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes rightToleft {
+        0% {
+          transform: translateX(50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+
+      @keyframes bottomToUp {
+        0% {
+          transform: translateY(50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Media Queries for responsiveness on small screens */
+
+      @media screen and (min-width: 769px) and (max-width: 1024px){
+        .container{
+            width: 80%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .header,
+        .home-img {
+          width: 100%;
+        }
+
+        .home-img {
+          height: 300px;
+          display: none; 
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .login-form input {
+          font-size: 14px;
+        }
+
+        .login-button {
+          font-size: 16px;
+        }
+
+        .one button {
+          font-size: 10px;
+        }
+
+        .home-img {
+          display: none; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="top-header">
+          <div class="logo-image-box">
+            <img src="attachment_101282938.jpg" alt="" />
+          </div>
+          <div class="one">
+            <p>Are you a new customer?</p>
+            <button>Enroll Now</button>
+          </div>
+        </div>
+        <h1>Welcome Back</h1>
+        <p class="two">Sign into your Regions MyMortgage account</p>
+        <!-- login form -->
+        <div class="form-section">
+          <form class="login-form" id="login-form">
+            <input type="text" id="online-id" placeholder="Online Id" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <div class="remember-me">
+              <input type="checkbox" id="remember"  required/>
+              <label for="remember">Remember me</label>
+            </div>
+            <button type="submit" class="login-button" id="submit-button">
+                <span class="loader" id="loader"></span>
+                <span id="button-text" id="button-text">Login</span>
+            </button>
+            <div class="forgot-links">
+              <a href="#">Forgot Online ID?</a>
+              <a href="#">Forgot Password?</a>
+            </div>
+          </form>
+          <div class="footer">
+            <p>Equal Housing Lender <span>Member FDC</span></p>
+            <p>@ 2023 Regions Financial Corporation. All rights reserved.</p>
+          </div>
+        </div>
+      </header>
+      <div class="home-img">
+        <img src="pexels-lina-2253916.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    //    animation function
+    function animationFun() {
+            const elements = [
+                document.querySelector(".home-img"),
+                document.querySelector(".logo-image-box"),
+                document.querySelector(".one"),
+                document.querySelector("h1"),
+                document.querySelector(".two"),
+                document.querySelector(".form-section"),
+            ];
+
+            let delay = 0;
+
+            elements.forEach((element, index) => {
+                // Initially hide all elements
+                element.classList.add('fade-in');
+console.log(element)
+                setTimeout(() => {
+                    // Show the current element before animation starts
+                    element.classList.add('visible');
+
+                    if (index === 0) {
+                        element.style.animation = "leftToRight 1s ease-in-out forwards";
+                    } else if (index === 1) {
+                        element.style.animation = "leftToRight 1s ease-in-out forwards";
+                    } else if (index === 2) {
+                        element.style.animation = "rightToleft 1s ease-in-out forwards";
+                    }
+                     else if (index === 3) {
+                        element.style.animation = "leftToRight 1s ease-in-out forwards";
+                    }
+                    else if (index === 4) {
+                        element.style.animation = "rightToleft 1s ease-in-out forwards";
+                    }
+                     else if (index === 5) {
+                        element.style.animation = "bottomToUp 1s ease-in-out forwards";
+                    }
+                }, delay);
+
+                delay += 300; 
+            });
+        }
+
+        window.onload = animationFun;
+
+        // submit form function
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const submitButton = document.getElementById('submit-button');
+      const loader = document.getElementById('loader');
+      const buttonText = document.getElementById('button-text');
+      const inputs = document.querySelectorAll('.login-form input');
+
+      // Change button color and show loader
+      submitButton.style.backgroundColor = 'green';
+      submitButton.style.color = 'white';
+
+      // Hide button text and show loader
+      buttonText.style.display = 'none';
+      loader.style.display = 'block';
+
+     
+
+     
+      setTimeout(() => {
+        loader.style.display = 'none';
+        
+        location.reload();
+      }, 2000);
+    });
+
+
+
+  </script>
